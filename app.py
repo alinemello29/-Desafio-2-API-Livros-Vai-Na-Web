@@ -5,7 +5,6 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-
 def init_db():
     with sqlite3.connect('database.db') as conn:
         conn.execute("""CREATE TABLE IF NOT EXISTS livros(
@@ -16,7 +15,6 @@ def init_db():
                    imagem_url TEXT NOT NULL
                    )""")
         print("Banco de dados criado!!")
-
 
 init_db()
 
